@@ -16,7 +16,7 @@ void setup() {
   
 // 2. The code below loads your face picture into the program. 
 //     Make sure the file name is correct for the face image you saved earlier
-face = loadImage("face.jpg");
+face = loadImage("Name.jpg");
   
 // 3. Set the size of the sketch. Make it big enough to show the face you chose.
 
