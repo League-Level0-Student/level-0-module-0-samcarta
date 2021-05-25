@@ -12,7 +12,19 @@ public class PentagonCrazy {
 	public static void main(String[] args) {
 		
 		//  Create a new Robot
-
+Robot rob = new Robot();
+rob.penDown();
+rob.setSpeed(150);
+rob.setPenColor(Color.pink);
+int sides = 10;
+int angle = 360/sides;
+int count = 0;
+while(count < 200) {
+rob.move(count);
+rob.turn(angle + 1);
+count ++;
+}
+rob.hide();
 		//  Put the robot's pen down
 
 		//  SPEED. Make the robot go at maximum speed (100)
