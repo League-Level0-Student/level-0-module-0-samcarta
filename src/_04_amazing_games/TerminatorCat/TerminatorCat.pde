@@ -1,30 +1,23 @@
-// 1. Drag and drop an image of a cat onto this sketch
-//    a. First find an image of a cat with BIG eyes(use google to search)
-//    b. Right click on the image and select 'Save image As'
-//    c. Rename the image something short (e.g. cat.jpg)
-//    d. Save the image to your computer's desktop
-//    e. Drag and drop the image anywhere on this sketch
 
 
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage cat;
-int x=0;
-int y=0;
+int x=4;
+int y=257;
 
 void setup() {
   
 // 2. The code below loads your cat picture into the program. 
 //     Make sure the file name is correct for the cat image you saved earlier
-cat = loadImage("cat.jpg");
+cat = loadImage("Cat.jpg");
   
 // 3. Set the size of the sketch. Make it big enough to show the cat you chose.
-
+size (500, 500);
 // 4. Resize the cat so it is the same size as the sketch
+cat.resize (500, 500);
 
-// 5. DRAW CAT.    Use the background() command to make the cat the background of the sketch
-//    Run the program to see if the cat is drawn. Get this working before you go on.
- 
+ background(cat);
 
   }
 
