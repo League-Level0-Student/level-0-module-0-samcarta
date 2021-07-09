@@ -26,7 +26,7 @@ void draw() {
 // 6. WHERE IS THE EYE? This code prints the x and y locations of the mouse when you click.
 //    You can use this to find the x and y for the center of the cat's eyes.
       if(mousePressed){
-          println("Mouse’s x-position: " + mouseX + "\n" + "Mouse’s y-position: " + mouseY + "\n");
+          println("Mouse’s x-position: " + 330 + "\n" + "Mouse’s y-position: " + 238 + "\n");
       }
 
 // 7. Run the program and click on one of the cat's eyes. 
@@ -36,15 +36,15 @@ void draw() {
 
 // 8. DRAW CIRCLES.
 //     The circles will have black lines around them by default. Put noStroke(); here to remove them.
-
+noStroke();
 // 9.  COLOR.  Set the color of your ellipse to the laser color you would like
 //    Remember to use the   fill()  command to set colors.
-
+fill(4);
 
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(x, y, width, height);
+                ellipse(x, y, 100, 100);
 // Run the program to make sure it is in the right place and is the right size.
 }
 
@@ -52,7 +52,7 @@ void draw() {
 //      the space bar. Run the program to test it.
 //      If you want it to move to the left, change to x-1=.
 void keyPressed() {
-    x+=1;
+    x-=1;
     y+=1;
     
 // 12.  If you want them to go faster, add more than one each time the key is pressed    
