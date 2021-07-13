@@ -3,8 +3,8 @@
 // This line of code creates a variable to hold your faccate picture
 // You will use it later.
 PImage cat;
-int x=4;
-int y=257;
+int x=168;
+int y=256;
 
 void setup() {
   
@@ -22,11 +22,15 @@ cat.resize (500, 500);
   }
 
 void draw() {
-  
+   if( x > width){
+     background(cat);
+ x = 168;
+y = 256;
+   }
 // 6. WHERE IS THE EYE? This code prints the x and y locations of the mouse when you click.
 //    You can use this to find the x and y for the center of the cat's eyes.
       if(mousePressed){
-          println("Mouse’s x-position: " + 330 + "\n" + "Mouse’s y-position: " + 238 + "\n");
+          println("Mouse’s x-position: " + mouseX + "\n" + "Mouse’s y-position: " + mouseY + "\n");
       }
 
 // 7. Run the program and click on one of the cat's eyes. 
@@ -44,20 +48,22 @@ fill(4);
 // 10 Use the ellipse() command to draw a circle on the eye (you will have to guess its size). 
 //    Use the x and y variables you just created to place the ellipse in the correct location.
 //                  The ellipse command looks like this:
-                ellipse(x, y, 100, 100);
+                ellipse(x, y, 130, 114);
 // Run the program to make sure it is in the right place and is the right size.
+                      ellipse(x + 160, y - 15, 130, 114);
+
 }
+
 
 // 11.  LASER BEAM.  This code will make your ellipse move down and to the right when you press 
 //      the space bar. Run the program to test it.
 //      If you want it to move to the left, change to x-1=.
 void keyPressed() {
-    x-=1;
-    y+=1;
+    x+=5;
+    y-=5;
     
 // 12.  If you want them to go faster, add more than one each time the key is pressed    
 }
- 
 
 //13.   Now make the cat shoot lasers from the other eye.
 //      You will need to click the mouse on the other eye to figure our where to draw the other circle
